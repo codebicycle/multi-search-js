@@ -1,22 +1,27 @@
 const stores = [
-  {"name": "dedeman.ro", "query": (searchTerm) => `https://www.dedeman.ro/ro/catalogsearch/result/v2?q=${searchTerm}`, "tags": ["DIY"]},
-  {"name": "leroymerlin.ro", "query": (searchTerm) => `https://www.leroymerlin.ro/produse/search/${searchTerm}`, "tags": ["DIY"]},
-  {"name": "bricodepot.ro", "query": (searchTerm) => `https://www.bricodepot.ro/catalogsearch/result/?q=${searchTerm}`, "tags": ["DIY"]},
-  {"name": "mathaus.ro", "query": (searchTerm) => `https://mathaus.ro/search?pb=true&text=${searchTerm}`, "tags": ["DIY"]},
-  {"name": "hornbach.ro", "query": (searchTerm) => `https://www.hornbach.ro/s/${searchTerm}`, "tags": ["DIY"]},
-]
+  { "name": "compari.ro", "query": (keyword) => `https://www.compari.ro/CategorySearch.php?st=${keyword}`, "tags": ["compare"] },
+  { "name": "price.ro", "query": (keyword) => `https://www.price.ro/index.php?action=q&text=${keyword}&submit=Cauta`, "tags": ["compare"] },
+  { "name": "hagglezon.com", "query": (keyword) => `https://www.hagglezon.com/en/s/${keyword}`, "tags": ["compare"] },
 
+  { "name": "dedeman", "query": (keyword) => `https://www.dedeman.ro/ro/catalogsearch/result/v2?q=${keyword}`, "tags": ["DIY"] },
+  { "name": "leroymerlin", "query": (keyword) => `https://www.leroymerlin.ro/produse/search/${keyword}`, "tags": ["DIY"] },
+  { "name": "bricodepot", "query": (keyword) => `https://www.bricodepot.ro/catalogsearch/result/?q=${keyword}`, "tags": ["DIY"] },
+  { "name": "mathaus", "query": (keyword) => `https://mathaus.ro/search?pb=true&text=${keyword}`, "tags": ["DIY"] },
+  { "name": "hornbach", "query": (keyword) => `https://www.hornbach.ro/s/${keyword}`, "tags": ["DIY"] },
+
+  { "name": "olx Iasi", "query": (keyword) => `https://www.olx.ro/iasi_39939/q-${keyword}`, "tags": ["marketplace"] },
+
+  { "name": "emag", "query": (keyword) => `https://www.emag.ro/search/${keyword}`, "tags": ["e-store"] },
+]
 
 const searchBox = document.getElementById('search-box')
 
-
 function changeURL(event) {
-  let searchTerm = encodeURI(searchBox.value)
+  let keyword = encodeURI(searchBox.value)
   let id = event.target.dataset.id
   let queryFunc = stores[id]["query"]
-  event.target.href = queryFunc(searchTerm)
+  event.target.href = queryFunc(keyword)
 }
-
 
 function populate(stores) {
   pushIds(stores)
@@ -24,10 +29,10 @@ function populate(stores) {
 
   for (let tag in tags) {
     let tagText = document.createTextNode(tag)
-    let h2 = document.createElement('h2')
-    h2.appendChild(tagText)
+    let span = document.createElement('span')
+    span.appendChild(tagText)
     let ul = document.createElement('ul')
-    
+
     for (let store of tags[tag]) {
       let linkText = document.createTextNode(store["name"])
 
@@ -36,7 +41,7 @@ function populate(stores) {
       a.href = '#'
       a.appendChild(linkText)
 
-      a.addEventListener('click', changeURL, {'capture': true})
+      a.addEventListener('mouseenter', changeURL, { 'capture': true })
 
       let li = document.createElement('li')
       li.appendChild(a)
@@ -45,7 +50,7 @@ function populate(stores) {
     }
 
     let storesBox = document.getElementById("stores-box")
-    storesBox.appendChild(h2)
+    storesBox.appendChild(span)
     storesBox.appendChild(ul)
   }
 }
