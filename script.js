@@ -12,6 +12,7 @@ const stores = [
   { "name": "olx Iasi", "query": (keyword) => `https://www.olx.ro/iasi_39939/q-${keyword}`, "tags": ["marketplace"] },
 
   { "name": "emag", "query": (keyword) => `https://www.emag.ro/search/${keyword}`, "tags": ["e-store"] },
+  { "name": "altex", "query": (keyword) => `https://altex.ro/cauta/?q=${keyword}`, "tags": ["e-store"] },
 ]
 
 const searchBox = document.getElementById('search-box')
