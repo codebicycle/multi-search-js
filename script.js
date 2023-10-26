@@ -13,6 +13,12 @@ const stores = [
 
   { "name": "emag", "query": (keyword) => `https://www.emag.ro/search/${keyword}`, "tags": ["e-store"] },
   { "name": "altex", "query": (keyword) => `https://altex.ro/cauta/?q=${keyword}`, "tags": ["e-store"] },
+  
+  { "name": "hotukdeals", "query": (keyword) => `https://www.hotukdeals.com/search?q=${keyword}`, "tags": ["deals"] },
+  { "name": "mydealz", "query": (keyword) => `https://www.mydealz.de/search?q=${keyword}`, "tags": ["deals"] },
+  
+  { "name": "hotukdeals travel", "query": (keyword) => `https://www.hotukdeals.com/tag/travel`, "tags": ["travel deals"] },
+  { "name": "mydealz travel", "query": (keyword) => `https://www.mydealz.de/gruppe/reisen`, "tags": ["travel deals"] },
 ]
 
 const searchBox = document.getElementById('search-box')
