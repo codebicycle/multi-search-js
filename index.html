@@ -14,15 +14,19 @@
 <body>
   <div class="container">
     <div class="row mt-5">
-      <form action="" onkeydown="return event.keyCode != 13;">
-        <label for="search-box">Search</label>
-        <input type="search" id="search-box" class="form-control">
+      <form action="" onkeydown="return event.keyCode != 13">
+        <div class="form-floating">
+          <input type="search" id="search-box" class="form-control">
+          <label for="search-box">Search</label>
+        </div>
         <span class="form-text">Then Ctrl+click on the links below</span>
       </form>
     </div>
-    <div id="stores-box" class="row mt-5"></div>
+    <div id="websites-box" class="row mt-5"></div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 
