@@ -79,6 +79,16 @@ yamlData = `
   tags:
     - travel deals
 
+- name:        travelator
+  URLTemplate: https://travelator.ro/
+  tags:
+    - travel deals
+
+- name:        aventurescu
+  URLTemplate: https://aventurescu.ro/
+  tags:
+    - travel deals
+
 - name:        printre carti
   URLTemplate: https://www.printrecarti.ro/?cauta={}
   tags:
