@@ -74,6 +74,11 @@ yamlData = `
   tags:
     - travel deals
 
+- name:        fly4free
+  URLTemplate: https://www.fly4free.com/flights/flight-deals/europe/
+  tags:
+    - travel deals
+
 - name:        printre carti
   URLTemplate: https://www.printrecarti.ro/?cauta={}
   tags:
