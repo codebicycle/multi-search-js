@@ -74,6 +74,11 @@ yamlData = `
   tags:
     - travel deals
 
+- name:        preisjaeger.at travel
+  URLTemplate: https://www.preisjaeger.at/gruppe/reisen
+  tags:
+    - travel deals
+
 - name:        chollometro travel
   URLTemplate: https://www.chollometro.com/categorias/viajes-y-ocio
   tags:
