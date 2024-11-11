@@ -74,6 +74,21 @@ yamlData = `
   tags:
     - travel deals
 
+- name:        chollometro travel
+  URLTemplate: https://www.chollometro.com/categorias/viajes-y-ocio
+  tags:
+    - travel deals
+
+- name:        pepper.it travel
+  URLTemplate: https://www.pepper.it/categorie/viaggi
+  tags:
+    - travel deals
+
+- name:        nl.pepper.com travel
+  URLTemplate: https://nl.pepper.com/groep/reizen
+  tags:
+    - travel deals
+
 - name:        fly4free
   URLTemplate: https://www.fly4free.com/flights/flight-deals/europe/
   tags:
