@@ -154,4 +154,24 @@ yamlData = `
   URLTemplate: https://www.carti-online.ro/?s={}&search_id=product&post_type=product
   tags:
     - anticariat
+
+  - name:      seminte-plante
+  URLTemplate: https://seminteplante.ro/cautare?controller=search&s={}
+  tags:
+    - garden  
+
+- name:        agropataki
+  URLTemplate: https://www.agropataki.ro/ro/cautare?orderby=position&orderway=desc&s={}
+  tags:
+    - garden
+
+- name:        seminte1.eu
+  URLTemplate: https://www.seminte1.eu/catalog/q/{}
+  tags:
+    - garden
+
+-name:         pepiniera Gradina Verde
+  URLTemplate: https://doropad.ro/?s={}
+  tags: 
+    - garden
 `
