@@ -155,7 +155,7 @@ yamlData = `
   tags:
     - anticariat
 
-  - name:      seminte-plante
+- name:      seminte-plante
   URLTemplate: https://seminteplante.ro/cautare?controller=search&s={}
   tags:
     - garden  
@@ -170,7 +170,7 @@ yamlData = `
   tags:
     - garden
 
--name:         pepiniera Gradina Verde
+- name:         pepiniera Gradina Verde
   URLTemplate: https://doropad.ro/?s={}
   tags: 
     - garden
